@@ -1,7 +1,5 @@
-/* ===== Language Toggle & Scroll Animations & Particles ===== */
 (function () {
   'use strict';
-
   let currentLang = 'en';
 
   // ── Language Toggle ──
@@ -20,7 +18,6 @@
     setLang(currentLang === 'en' ? 'ja' : 'en');
   });
 
-  // Restore saved language
   const saved = localStorage.getItem('portfolio-lang');
   if (saved) setLang(saved);
 
@@ -63,33 +60,16 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Animate skill bars
         entry.target.querySelectorAll('.skill-fill').forEach(bar => {
           bar.style.width = bar.dataset.width + '%';
-        });
-        // Animate stat counters
-        entry.target.querySelectorAll('.stat-number').forEach(num => {
-          animateCount(num, parseInt(num.dataset.count));
         });
       }
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll('.skill-card, .project-card, .about-grid, .contact-links').forEach(el => {
+  document.querySelectorAll('.skill-card, .project-card, .achievement-card, .timeline-item, .about-grid, .contact-links').forEach(el => {
     observer.observe(el);
   });
-
-  function animateCount(el, target) {
-    if (el.dataset.animated) return;
-    el.dataset.animated = '1';
-    let current = 0;
-    const step = Math.max(1, Math.floor(target / 30));
-    const interval = setInterval(() => {
-      current += step;
-      if (current >= target) { current = target; clearInterval(interval); }
-      el.textContent = current + '+';
-    }, 40);
-  }
 
   // ── Particles ──
   const canvas = document.getElementById('particle-canvas');
