@@ -1,6 +1,7 @@
 # Tith Sathya | ティツ・サティヤ — Bilingual Portfolio
 
 Live Website: [Jerry12sir/jpportf](https://Jerry12sir.github.io/jpportf/)
+Notice: In mobile, you need to rotate to horizontal view to change the language.
 
 ---
 
