@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Sathya</title>
+  <meta name="description" content="Engineering projects and project history of Tith Sathya — Network Design & Optimization, Mini Smart Garden IoT, and project gallery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-group">
+        <h1 class="brand-name" data-en="Sathya" data-ja="サティヤ">Sathya</h1>
+        <p class="brand-tagline" data-en="Telecom & Network Engineering · CADT<br>Japanese IT Pathway · AUPP" data-ja="夢に向かって、歩み続ける。<br>CADT 電気通信 · AUPP 日本語IT">Telecom & Network Engineering · CADT<br>Japanese IT Pathway · AUPP</p>
+      </a>
+
+      <div class="nav-actions-wrap">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="about.html" class="nav-link" data-en="About" data-ja="自己紹介">About</a></li>
+            <li><a href="hobby.html" class="nav-link" data-en="Hobby" data-ja="趣味">Hobby</a></li>
+            <li><a href="education.html" class="nav-link" data-en="Education" data-ja="学歴">Education</a></li>
+            <li><a href="achievements.html" class="nav-link" data-en="Achievements" data-ja="実績">Achievements</a></li>
+            <li><a href="projects.html" class="nav-link active" data-en="Projects" data-ja="プロジェクト">Projects</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-icons">
+          <button class="lang-flag-btn" aria-label="日本語に切替 (Switch to Japanese)" title="日本語に切替 (Switch to Japanese)">
+            <svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#ffffff" stroke="#d5dde0" stroke-width="1.2"/><circle cx="16" cy="16" r="6" fill="#bc002d"/></svg>
+          </button>
+          <a href="https://github.com/Jerry12sir" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sathya-tith-368833337/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="about.html" class="nav-link" data-en="About" data-ja="自己紹介">About</a>
+    <a href="hobby.html" class="nav-link" data-en="Hobby" data-ja="趣味">Hobby</a>
+    <a href="education.html" class="nav-link" data-en="Education" data-ja="学歴">Education</a>
+    <a href="achievements.html" class="nav-link" data-en="Achievements" data-ja="実績">Achievements</a>
+    <a href="projects.html" class="nav-link active" data-en="Projects" data-ja="プロジェクト">Projects</a>
+  </div>
+
+  <main class="page-container">
+    <header class="page-header">
+      <div class="page-kicker" data-en="Engineering Works" data-ja="開発・制作物">Engineering Works</div>
+      <h2 class="page-title" data-en="Projects" data-ja="プロジェクト">Projects</h2>
+      <p class="page-subtitle" data-en="Network infrastructure designs, IoT prototypes, and project history." data-ja="ネットワーク構成設計、IoTシステム、これまでの制作履歴です。">Network infrastructure designs, IoT prototypes, and project history.</p>
+    </header>
+
+    <div class="projects-showcase-grid">
+
+      <!-- Project 1: 日本語アタック (Nihongo Attack) -->
+      <article class="project-showcase-card">
+        <div class="project-img-container">
+          <img src="images/projects/project-nihongo-attack.jpg" alt="日本語アタック (Nihongo Attack)" />
+        </div>
+        <div class="project-body">
+          <div class="project-header-top">
+            <div class="project-meta-badges">
+              <span class="project-timeline-date" data-en="Sep 2026 – Sep 2026" data-ja="2026年9月 – 2026年9月">Sep 2026 – Sep 2026</span>
+              <span class="project-team-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span data-en="Leader · 5 members" data-ja="リーダー · 5名">Leader · 5 members</span>
+              </span>
+              <span class="feature-category" data-en="WEB APP & GAME" data-ja="Webアプリ・ゲーム">WEB APP & GAME</span>
+            </div>
+            <!-- Two Circle Links (Demo Site & GitHub Repo - appears only when links exist) -->
+            <div class="project-links-wrap">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-circle-link link-ext" title="Live Demo" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-circle-link link-gh" title="GitHub Repository" aria-label="GitHub Repository">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-en="日本語アタック" data-ja="日本語アタック">日本語アタック</h3>
+          <p class="project-desc" data-en="Nihongo Attack is a Japanese quiz game where you can play until you run out of lives and aim for the highest score. Each question has a 10-second time limit, with N4 and N3 difficulty levels to test. The score is recorded if it is on the Top 10 leaderboard." data-ja="「日本語アタック」はライフが尽きるまでハイスコアを目指す日本語クイズゲームです。各問題は10秒の制限時間があり、JLPT N4およびN3レベルに対応。スコアはTop 10リーダーボードに記録されます。">Nihongo Attack is a Japanese quiz game where you can play until you run out of lives and aim for the highest score. Each question has a 10-second time limit, with N4 and N3 difficulty levels to test. The score is recorded if it is on the Top 10 leaderboard.</p>
+          
+          <div class="project-responsibilities">
+            <span class="resp-heading" data-en="Responsibilities" data-ja="担当業務・役割">Responsibilities</span>
+            <ul class="resp-list">
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Designed All Questions" data-ja="全問題の設計・作成">Designed All Questions</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Implemented Review Page" data-ja="復習・解説ページの実装">Implemented Review Page</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Quality Assurance Check" data-ja="品質保証・テスト検証">Quality Assurance Check</span>
+              </li>
+            </ul>
+          </div>
+
+          <span class="tools-heading" data-en="Environment/Tools" data-ja="開発環境・ツール">Environment/Tools</span>
+          <div class="project-tags-wrap">
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">ESLint</span>
+            <span class="tech-tag">Prettier</span>
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">Vitest</span>
+            <span class="tech-tag">TypeScript</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: JIYUU-Button-Counter -->
+      <article class="project-showcase-card">
+        <div class="project-img-container">
+          <img src="images/projects/project-jiyuu-counter.png" alt="JIYUU-Button-Counter" />
+        </div>
+        <div class="project-body">
+          <div class="project-header-top">
+            <div class="project-meta-badges">
+              <span class="project-timeline-date" data-en="Aug 2026 – Aug 2026" data-ja="2026年8月 – 2026年8月">Aug 2026 – Aug 2026</span>
+              <span class="project-team-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span data-en="Leader · 5 members" data-ja="リーダー · 5名">Leader · 5 members</span>
+              </span>
+              <span class="feature-category" data-en="WEB APP" data-ja="Webアプリ">WEB APP</span>
+            </div>
+            <!-- Two Circle Links (Demo Site & GitHub Repo - appears only when links exist) -->
+            <div class="project-links-wrap">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="project-circle-link link-ext" title="Live Demo" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://github.com/JIYUU-TEAM-3/BUTTONCOUNTER" target="_blank" rel="noopener noreferrer" class="project-circle-link link-gh" title="GitHub Repository" aria-label="GitHub Repository">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-en="JIYUU-Button-Counter" data-ja="JIYUU-Button-Counter">JIYUU-Button-Counter</h3>
+          <p class="project-desc" data-en="Developed a web-based application for tracking button clicks, with real-time counter updates and simple counter management features. Focused on creating a responsive and user-friendly interface." data-ja="リアルタイムなカウント更新とシンプルな管理機能を備えたボタンクリック計測Webアプリケーション。直感的でレスポンシブなユーザーインターフェースの実装に注力しました。">Developed a web-based application for tracking button clicks, with real-time counter updates and simple counter management features. Focused on creating a responsive and user-friendly interface.</p>
+          
+          <div class="project-responsibilities">
+            <span class="resp-heading" data-en="Responsibilities" data-ja="担当業務・役割">Responsibilities</span>
+            <ul class="resp-list">
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Assign tasks" data-ja="タスク割り振りと進行管理">Assign tasks</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Web Deployment" data-ja="Webデプロイ・運用">Web Deployment</span>
+              </li>
+            </ul>
+          </div>
+
+          <span class="tools-heading" data-en="Environment/Tools" data-ja="開発環境・ツール">Environment/Tools</span>
+          <div class="project-tags-wrap">
+            <span class="tech-tag">Svelte</span>
+            <span class="tech-tag">pnpm</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Prettier</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: High Availability on MySQL InnoDB Cluster -->
+      <article class="project-showcase-card">
+        <div class="project-img-container">
+          <img src="images/projects/project-mysql-cluster.jpg" alt="High Availability on MySQL InnoDB Cluster Architecture" />
+        </div>
+        <div class="project-body">
+          <div class="project-header-top">
+            <div class="project-meta-badges">
+              <span class="project-timeline-date" data-en="Apr 2026 – Jul 2026" data-ja="2026年4月 – 7月">Apr 2026 – Jul 2026</span>
+              <span class="project-team-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span data-en="Solo Dev · 1 member" data-ja="個人開発 · 1名">Solo Dev · 1 member</span>
+              </span>
+              <span class="feature-category" data-en="DATABASE & HA" data-ja="データベース・高可用性">DATABASE & HA</span>
+            </div>
+            <!-- No links for this project (matches user image and requirements) -->
+          </div>
+          <h3 class="project-title" data-en="High Availability on MySQL InnoDB Cluster" data-ja="MySQL InnoDB Clusterによる高可用性システム">High Availability on MySQL InnoDB Cluster</h3>
+          <p class="project-desc" data-en="Designed and implemented a high-availability MySQL database cluster using three MySQL nodes, two MySQL Routers, and Keepalived. Configured automatic failover and tested database availability and recovery during node failures." data-ja="3つのMySQLノード、2台のMySQL Router、Keepalived（VIPフェイルオーバー）を用いた高可用性MySQLデータベースクラスタを設計・構築。自動フェイルオーバー設定と障害時リカバリを検証しました。">Designed and implemented a high-availability MySQL database cluster using three MySQL nodes, two MySQL Routers, and Keepalived. Configured automatic failover and tested database availability and recovery during node failures.</p>
+          
+          <div class="project-responsibilities">
+            <span class="resp-heading" data-en="Responsibilities" data-ja="担当業務・役割">Responsibilities</span>
+            <ul class="resp-list">
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Configure database nodes" data-ja="データベースノード構築・クラスタ構成">Configure database nodes</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Configure routers with Keepalived" data-ja="Keepalivedとルーター冗長化構成">Configure routers with Keepalived</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Documentation" data-ja="構成仕様書・手順書の作成">Documentation</span>
+              </li>
+            </ul>
+          </div>
+
+          <span class="tools-heading" data-en="Environment/Tools" data-ja="開発環境・ツール">Environment/Tools</span>
+          <div class="project-tags-wrap">
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">InnoDB Cluster</span>
+            <span class="tech-tag">MySQL Router</span>
+            <span class="tech-tag">Keepalived</span>
+            <span class="tech-tag">High Availability</span>
+            <span class="tech-tag">Failover</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Network Design & Optimization -->
+      <article class="project-showcase-card">
+        <div class="project-img-container">
+          <img src="images/projects/project-network.jpg" alt="Network Design & Optimization Topology Diagram" />
+        </div>
+        <div class="project-body">
+          <div class="project-header-top">
+            <div class="project-meta-badges">
+              <span class="project-timeline-date" data-en="Feb 2026 – Mar 2026" data-ja="2026年2月 – 3月">Feb 2026 – Mar 2026</span>
+              <span class="project-team-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span data-en="Leader · 4 members" data-ja="リーダー · 4名">Leader · 4 members</span>
+              </span>
+              <span class="feature-category" data-en="NETWORKING" data-ja="ネットワーク">NETWORKING</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-en="Network Design & Optimization" data-ja="ネットワーク設計と最適化">Network Design & Optimization</h3>
+          <p class="project-desc" data-en="Designed and implemented a scalable Layer 2 network using EtherChannel and MSTP. Configured link aggregation for increased bandwidth and redundancy. Optimized traffic flow, prevented network loops, and evaluates the performance and fault tolerance of the optimized topology through network simulation (GNS3)." data-ja="EtherChannelおよびMSTPを活用し、スケーラブルなレイヤー2ネットワークを設計・構築。リンクアグリゲーションにより帯域増強と冗長性を両立させ、ループ防止とネットワークシミュレーション（GNS3）によるフォールトトレランス評価を行いました。">Designed and implemented a scalable Layer 2 network using EtherChannel and MSTP. Configured link aggregation for increased bandwidth and redundancy. Optimized traffic flow, prevented network loops, and evaluates the performance and fault tolerance of the optimized topology through network simulation (GNS3).</p>
+          
+          <div class="project-responsibilities">
+            <span class="resp-heading" data-en="Responsibilities" data-ja="担当業務・役割">Responsibilities</span>
+            <ul class="resp-list">
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Design the topology" data-ja="ネットワークトポロジ設計">Design the topology</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Configure EtherChannel" data-ja="EtherChannelリンクアグリゲーション設定">Configure EtherChannel</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Configure MSTP" data-ja="MSTP（マルチプルSTP）設定">Configure MSTP</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Configure OSPF" data-ja="OSPFルーティング設定">Configure OSPF</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Documentation" data-ja="ネットワーク構成ドキュメント作成">Documentation</span>
+              </li>
+            </ul>
+          </div>
+
+          <span class="tools-heading" data-en="Environment/Tools" data-ja="開発環境・ツール">Environment/Tools</span>
+          <div class="project-tags-wrap">
+            <span class="tech-tag">EtherChannel</span>
+            <span class="tech-tag">MSTP</span>
+            <span class="tech-tag">Layer 2 Switching</span>
+            <span class="tech-tag">Cisco Packet Tracer</span>
+            <span class="tech-tag">GNS3</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: Mini Smart Garden -->
+      <article class="project-showcase-card">
+        <div class="project-img-container">
+          <img src="images/projects/project-garden.jpg" alt="Mini Smart Garden IoT Prototype" />
+        </div>
+        <div class="project-body">
+          <div class="project-header-top">
+            <div class="project-meta-badges">
+              <span class="project-timeline-date" data-en="Oct 2025 – Dec 2025" data-ja="2025年10月 – 12月">Oct 2025 – Dec 2025</span>
+              <span class="project-team-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span data-en="Leader · 5 members" data-ja="リーダー · 5名">Leader · 5 members</span>
+              </span>
+              <span class="feature-category" data-en="IOT & WEB" data-ja="IoT・Web">IOT & WEB</span>
+            </div>
+          </div>
+          <h3 class="project-title" data-en="Mini Smart Garden" data-ja="ミニスマートガーデン（自動給水IoT）">Mini Smart Garden</h3>
+          <p class="project-desc" data-en="Developed a plant monitoring system with real-time humidity, temperature, and soil moisture tracking, featuring automated/manual watering and remote web control with customizable thresholds." data-ja="土壌水分、気温、湿度をリアルタイムで追跡する植物モニタリングシステムを開発。閾値による自動・手動給水とリモートWebコントロール機能を実装しました。">Developed a plant monitoring system with real-time humidity, temperature, and soil moisture tracking, featuring automated/manual watering and remote web control with customizable thresholds.</p>
+          
+          <div class="project-responsibilities">
+            <span class="resp-heading" data-en="Responsibilities" data-ja="担当業務・役割">Responsibilities</span>
+            <ul class="resp-list">
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Configure the esp32" data-ja="ESP32の制御・ファームウェア設定">Configure the esp32</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Build the prototype" data-ja="ハードウェア試作・プロトタイプ製作">Build the prototype</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Assign tasks" data-ja="タスク割り振りとプロジェクト進行管理">Assign tasks</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Documentation" data-ja="実験レポート・技術ドキュメント作成">Documentation</span>
+              </li>
+            </ul>
+          </div>
+
+          <span class="tools-heading" data-en="Environment/Tools" data-ja="開発環境・ツール">Environment/Tools</span>
+          <div class="project-tags-wrap">
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">Sensors</span>
+            <span class="tech-tag">Web App</span>
+            <span class="tech-tag">Automation</span>
+            <span class="tech-tag">ESP32</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Project History Section -->
+    <section class="history-section-wrap">
+      <h3 data-en="Project History & Lab Archives" data-ja="プロジェクト履歴・実験アーカイブ">Project History & Lab Archives</h3>
+      <p data-en="Archives of previous technical experiments, topology designs, and hardware prototypes." data-ja="過去に取り組んだネットワーク実験やプロトタイプの記録です。">Archives of previous technical experiments, topology designs, and hardware prototypes.</p>
+
+      <div class="history-gallery-grid">
+
+        <div class="history-thumb-slot">
+          <div class="thumb-frame">
+            <!-- Put photo: <img src="images/history-vlan.png" alt="VLAN Lab" /> -->
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ffffff;font-size:1.8rem;">🔌</div>
+          </div>
+          <div class="thumb-info">
+            <h4 data-en="Multi-VLAN & Trunking" data-ja="VLAN・トランキング構成">Multi-VLAN & Trunking</h4>
+            <p data-en="802.1Q trunking and Inter-VLAN routing." data-ja="802.1QトランキングとVLAN間ルーティング。">802.1Q trunking and Inter-VLAN routing.</p>
+          </div>
+        </div>
+
+        <div class="history-thumb-slot">
+          <div class="thumb-frame">
+            <!-- Put photo: <img src="images/history-ospf.png" alt="OSPF Lab" /> -->
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ffffff;font-size:1.8rem;">🗺️</div>
+          </div>
+          <div class="thumb-info">
+            <h4 data-en="Hierarchical OSPF Routing" data-ja="階層型OSPFルーティング">Hierarchical OSPF Routing</h4>
+            <p data-en="Multi-area OSPF with ACL traffic control." data-ja="マルチエリアOSPFとACLフィルタリング。">Multi-area OSPF with ACL traffic control.</p>
+          </div>
+        </div>
+
+        <div class="history-thumb-slot">
+          <div class="thumb-frame">
+            <!-- Put photo: <img src="images/history-sensor.png" alt="Telemetry Circuit" /> -->
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ffffff;font-size:1.8rem;">📊</div>
+          </div>
+          <div class="thumb-info">
+            <h4 data-en="Sensor Telemetry Circuit" data-ja="環境センサー計測回路">Sensor Telemetry Circuit</h4>
+            <p data-en="Analog-digital sensor conversion interface." data-ja="環境データ計測用センサー変換回路試作。">Analog-digital sensor conversion interface.</p>
+          </div>
+        </div>
+
+        <div class="history-thumb-slot">
+          <div class="thumb-frame">
+            <!-- Put photo: <img src="images/history-cadt.png" alt="CADT Lab Reports" /> -->
+            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ffffff;font-size:1.8rem;">📐</div>
+          </div>
+          <div class="thumb-info">
+            <h4 data-en="Protocol Benchmarking" data-ja="プロトコル解析レポート">Protocol Benchmarking</h4>
+            <p data-en="Packet dissection using Wireshark." data-ja="Wiresharkを用いたパケット解析検証。">Packet dissection using Wireshark.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="breadcrumb-bar">
+    <a href="index.html" data-en="Home" data-ja="トップページ">Home</a>
+    <span>&gt;</span>
+    <span class="breadcrumb-current" data-en="Projects" data-ja="プロジェクト">Projects</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-wave-wrap">
+    <svg class="footer-top-wave-svg" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 30 C320 65, 640 -5, 960 25 C1200 45, 1360 15, 1440 28 L1440 60 L0 60 Z" fill="#0f3b4c"/>
+    </svg>
+    <button class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+
+    <div class="footer-main-inner">
+      <div class="footer-brand">
+        <div class="f-brand-name" data-en="Sathya" data-ja="サティヤ">Sathya</div>
+        <p class="f-tagline" data-en="Telecom & Network Engineering Student at CADT.<br>Japanese IT Pathway at AUPP." data-ja="CADT 電気通信・ネットワーク工学専攻。<br>AUPP 日本語ITパスウェイ。">Telecom & Network Engineering Student at CADT.<br>Japanese IT Pathway at AUPP.</p>
+      </div>
+
+      <div class="footer-contact-block">
+        <div class="contact-label-tag" data-en="【Contact】" data-ja="【お問い合わせ】">【Contact】</div>
+        <a href="mailto:tithsathyasan@gmail.com" class="contact-email-link">
+          <span>✉</span>
+          <span>tithsathyasan@gmail.com</span>
+        </a>
+        <div class="footer-social-row">
+          <a href="https://github.com/Jerry12sir" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+          <a href="https://www.linkedin.com/in/sathya-tith-368833337/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <ul class="footer-nav-list">
+          <li><a href="index.html" data-en="Home" data-ja="トップページ">Home</a></li>
+          <li><a href="about.html" data-en="About Me" data-ja="自己紹介">About Me</a></li>
+          <li><a href="hobby.html" data-en="Hobbies & Passions" data-ja="趣味・興味">Hobbies & Passions</a></li>
+          <li><a href="education.html" data-en="Education Timeline" data-ja="学歴タイムライン">Education Timeline</a></li>
+          <li><a href="achievements.html" data-en="Honors & Achievements" data-ja="受賞・実績">Honors & Achievements</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>© 2026 Tith Sathya. All rights reserved.</div>
+      <div data-en="Bilingual Engineering Portfolio" data-ja="バイリンガル工学ポートフォリオ">Bilingual Engineering Portfolio</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

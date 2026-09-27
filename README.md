@@ -25,3 +25,6 @@ jpportfolio/
 └── README.md      # Project documentation
 ```
 
+---
+## Todo
+- Add MySQL Cluster to the project.

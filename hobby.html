@@ -3,30 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sathya — Portfolio</title>
-  <meta name="description" content="Portfolio of Tith Sathya — Telecom & Network Engineering at CADT, Japanese IT Pathway at AUPP." />
+  <title>Hobbies | Sathya</title>
+  <meta name="description" content="Hobbies and interests of Tith Sathya — Japanese language learning, network tinkering, mental math, and technology." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="is-top">
+<body>
 
-  <!-- Header (Umitabi-Yamatabi Inspired) -->
+  <!-- Header -->
   <header id="site-header">
     <div class="header-container">
-      <!-- Top Left Brand: Sathya in EN, サティヤ in JA -->
       <a href="index.html" class="brand-group">
         <h1 class="brand-name" data-en="Sathya" data-ja="サティヤ">Sathya</h1>
         <p class="brand-tagline" data-en="Telecom & Network Engineering · CADT<br>Japanese IT Pathway · AUPP" data-ja="夢に向かって、歩み続ける。<br>CADT 電気通信 · AUPP 日本語IT">Telecom & Network Engineering · CADT<br>Japanese IT Pathway · AUPP</p>
       </a>
 
-      <!-- Top Right Actions: 1 Line Nav + Green Flag Circle + GitHub + LinkedIn -->
       <div class="nav-actions-wrap">
         <nav>
           <ul class="nav-links">
             <li><a href="about.html" class="nav-link" data-en="About" data-ja="自己紹介">About</a></li>
-            <li><a href="hobby.html" class="nav-link" data-en="Hobby" data-ja="趣味">Hobby</a></li>
+            <li><a href="hobby.html" class="nav-link active" data-en="Hobby" data-ja="趣味">Hobby</a></li>
             <li><a href="education.html" class="nav-link" data-en="Education" data-ja="学歴">Education</a></li>
             <li><a href="achievements.html" class="nav-link" data-en="Achievements" data-ja="実績">Achievements</a></li>
             <li><a href="projects.html" class="nav-link" data-en="Projects" data-ja="プロジェクト">Projects</a></li>
@@ -34,21 +32,15 @@
         </nav>
 
         <div class="header-icons">
-          <!-- Flag Language Switcher (Real Vector SVG) -->
           <button class="lang-flag-btn" aria-label="日本語に切替 (Switch to Japanese)" title="日本語に切替 (Switch to Japanese)">
             <svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#ffffff" stroke="#d5dde0" stroke-width="1.2"/><circle cx="16" cy="16" r="6" fill="#bc002d"/></svg>
           </button>
-
-          <!-- GitHub Circle -->
           <a href="https://github.com/Jerry12sir" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub profile">
             <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
-
-          <!-- LinkedIn Circle -->
           <a href="https://www.linkedin.com/in/sathya-tith-368833337/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn profile">
             <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
-
           <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
           </button>
@@ -60,108 +52,113 @@
   <!-- Mobile Drawer -->
   <div id="mobile-drawer" class="mobile-drawer">
     <a href="about.html" class="nav-link" data-en="About" data-ja="自己紹介">About</a>
-    <a href="hobby.html" class="nav-link" data-en="Hobby" data-ja="趣味">Hobby</a>
+    <a href="hobby.html" class="nav-link active" data-en="Hobby" data-ja="趣味">Hobby</a>
     <a href="education.html" class="nav-link" data-en="Education" data-ja="学歴">Education</a>
     <a href="achievements.html" class="nav-link" data-en="Achievements" data-ja="実績">Achievements</a>
     <a href="projects.html" class="nav-link" data-en="Projects" data-ja="プロジェクト">Projects</a>
   </div>
 
-  <main>
-    <!-- Main Visual Stage (Centerpiece Big Picture + Line Art) -->
-    <section class="p-top__intro">
-      <div class="intro-stage">
+  <main class="page-container">
+    <header class="page-header">
+      <div class="page-kicker" data-en="Interests & Passions" data-ja="興味と探求">Interests & Passions</div>
+      <h2 class="page-title" data-en="Hobbies" data-ja="趣味・探求">Hobbies</h2>
+      <p class="page-subtitle" data-en="Activities that broaden my perspective and sharpen my engineering mindset." data-ja="視野を広げ、エンジニアとしての知的好奇心を刺激する活動です。">Activities that broaden my perspective and sharpen my engineering mindset.</p>
+    </header>
 
-        <!-- Centerpiece Panoramic Photo Container -->
-        <div class="intro-movie">
-          <img src="images/hero.jpg" alt="Hero Picture" class="hero-photo" />
-        </div>
+    <!-- 4 Hobby Sections (Going down with standalone photo galleries & dividers) -->
 
-        <!-- Right Standing Text: Centered at Middle of Image Height -->
-        <div class="intro-right-accent">
-          <div class="intro-ttl__text">
-            <div class="ttl-line ttl-main" data-en="I LOVE FREEDOM" data-ja="自由が好きです">I LOVE FREEDOM</div>
+    <!-- Section 1: Japanese Language & Culture -->
+    <section class="hobby-section">
+      <div class="hobby-header-block">
+        <span class="feature-category" data-en="LANGUAGE" data-ja="語学">LANGUAGE</span>
+        <h3 class="hobby-section-title" data-en="Japanese Language & Culture" data-ja="日本語学習と文化探求">Japanese Language & Culture</h3>
+        <p class="hobby-section-desc" data-en="Studying Japanese intensely through the AUPP Pathway program. I focus on conversational fluency, kanji, and immersing myself in Japanese technical media and literature." data-ja="AUPP日本語ITプログラムを通じて日常会話からビジネス日本語まで熱心に学習中。言語の習得と共に日本文化の深さを学んでいます。">Studying Japanese intensely through the AUPP Pathway program. I focus on conversational fluency, kanji, and immersing myself in Japanese technical media and literature.</p>
+      </div>
+
+      <!-- Pure Standalone Picture Gallery (No text attached) -->
+      <div class="hobby-photo-gallery">
+        <div class="hobby-photo-track">
+          <div class="hobby-photo-frame">
+            <img src="images/hobbies/hobby-japanese.jpg" alt="Japanese Language & Culture" />
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- Editorial Feature Showcase (Matches umitabi-yamatabi.jp feature-bloc) -->
-    <section class="p-top__feature">
-      <div class="feature-header">
-        <span class="feature-kicker" data-en="Highlights" data-ja="ハイライト">Highlights</span>
-        <h2 class="feature-heading" data-en="Featured Activities & Works" data-ja="注目の実績と取り組み">Featured Activities & Works</h2>
+    <!-- Divider Line (Doesn't reach from side to side) -->
+    <div class="hobby-section-divider"></div>
+
+    <!-- Section 2: Taking Picture -->
+    <section class="hobby-section">
+      <div class="hobby-header-block">
+        <span class="feature-category" data-en="PHOTOGRAPHY" data-ja="写真撮影">PHOTOGRAPHY</span>
+        <h3 class="hobby-section-title" data-en="Taking Picture" data-ja="写真撮影">Taking Picture</h3>
+        <p class="hobby-section-desc" data-en="Capturing everyday moments, urban landscapes, and natural light. Photography trains my eye for composition, detail, and visual storytelling." data-ja="街並み、光と影、日常の美しい瞬間をカメラで切り取ります。構図や色彩の美しさを探求する大切な時間です。">Capturing everyday moments, urban landscapes, and natural light. Photography trains my eye for composition, detail, and visual storytelling.</p>
       </div>
 
-      <div class="feature-bloc-wrap">
-
-        <!-- Left Large Featured Card -->
-        <a href="achievements.html" class="feature-item-large">
-          <div class="f-img-wrap">
-            <img src="images/achievements/achievement-netacad.jpg" alt="NetAcad Rider 2025" />
+      <div class="hobby-photo-gallery">
+        <div class="hobby-photo-track">
+          <div class="hobby-photo-frame">
+            <img src="images/hobbies/hobby-photo.jpg" alt="Taking Picture — Camera & City View" />
           </div>
-          <div class="f-info">
-            <span class="feature-category" data-en="HONOR" data-ja="受賞">HONOR</span>
-            <h3 class="f-title" data-en="APJC NetAcad Rider 2025 — 1st Runner Up in Cambodia" data-ja="APJC NetAcad ライダー 2025 — カンボジア全国 準優勝">APJC NetAcad Rider 2025 — 1st Runner Up in Cambodia</h3>
-            <p class="f-desc" data-en="Cisco regional networking competition. Tested real-time troubleshooting, link convergence, and routing under strict constraints." data-ja="Cisco主催の難関競技会にて、トラブルシューティングとルーティング実践力を競い、全国準優勝トロフィーを受賞。">Cisco regional networking competition. Tested real-time troubleshooting, link convergence, and routing under strict constraints.</p>
+          <div class="hobby-photo-frame">
+            <img src="images/hobbies/hobby-photo-2.jpg" alt="Taking Picture — Tokyo Neon Night Walk" />
           </div>
-        </a>
-
-        <!-- Right 4-Card Editorial Column -->
-        <div class="feature-list-col">
-
-          <a href="projects.html" class="feature-mini-item">
-            <div class="mini-img">
-              <img src="images/projects/project-nihongo-attack.jpg" alt="日本語アタック (Nihongo Attack)" />
-            </div>
-            <div class="mini-info">
-              <span class="feature-category" data-en="GAME & WEB" data-ja="ゲーム・Web">GAME & WEB</span>
-              <h4 class="mini-title" data-en="日本語アタック (Nihongo Attack)" data-ja="日本語アタック">日本語アタック (Nihongo Attack)</h4>
-            </div>
-          </a>
-
-          <a href="projects.html" class="feature-mini-item">
-            <div class="mini-img">
-              <img src="images/projects/project-jiyuu-counter.png" alt="JIYUU-Button-Counter" />
-            </div>
-            <div class="mini-info">
-              <span class="feature-category" data-en="WEB APP" data-ja="Webアプリ">WEB APP</span>
-              <h4 class="mini-title" data-en="JIYUU-Button-Counter" data-ja="JIYUU-Button-Counter">JIYUU-Button-Counter</h4>
-            </div>
-          </a>
-
-          <a href="projects.html" class="feature-mini-item">
-            <div class="mini-img">
-              <img src="images/projects/project-mysql-cluster.jpg" alt="MySQL InnoDB Cluster" />
-            </div>
-            <div class="mini-info">
-              <span class="feature-category" data-en="DATABASE & HA" data-ja="データベース・HA">DATABASE & HA</span>
-              <h4 class="mini-title" data-en="High Availability MySQL Cluster" data-ja="MySQL InnoDB Cluster 高可用性構成">High Availability MySQL Cluster</h4>
-            </div>
-          </a>
-
-          <a href="projects.html" class="feature-mini-item">
-            <div class="mini-img">
-              <img src="images/projects/project-network.jpg" alt="Network Design & Optimization" />
-            </div>
-            <div class="mini-info">
-              <span class="feature-category" data-en="NETWORKING" data-ja="ネットワーク">NETWORKING</span>
-              <h4 class="mini-title" data-en="Network Design & Optimization" data-ja="ネットワーク設計と最適化">Network Design & Optimization</h4>
-            </div>
-          </a>
-
+          <div class="hobby-photo-frame">
+            <img src="images/hobbies/hobby-photo-3.jpg" alt="Taking Picture — Golden Hour Ocean Sunset" />
+          </div>
         </div>
+      </div>
+    </section>
 
+    <!-- Divider Line -->
+    <div class="hobby-section-divider"></div>
+
+    <!-- Section 3: Shooting Video -->
+    <section class="hobby-section">
+      <div class="hobby-header-block">
+        <span class="feature-category" data-en="CINEMATOGRAPHY" data-ja="映像制作">CINEMATOGRAPHY</span>
+        <h3 class="hobby-section-title" data-en="Shooting Video" data-ja="動画撮影・映像制作">Shooting Video</h3>
+        <p class="hobby-section-desc" data-en="Creating cinematic clips and short films. Exploring framing, motion, pacing, and color grading to tell compelling visual stories." data-ja="シネマティックな動画撮影と映像編集。カメラワーク、トランジション、カラーグレーディングで感情を伝える映像を制作。">Creating cinematic clips and short films. Exploring framing, motion, pacing, and color grading to tell compelling visual stories.</p>
+      </div>
+
+      <div class="hobby-photo-gallery">
+        <div class="hobby-photo-track">
+          <div class="hobby-photo-frame">
+            <img src="images/hobbies/hobby-video.jpg" alt="Shooting Video" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider Line -->
+    <div class="hobby-section-divider"></div>
+
+    <!-- Section 4: Watching Anime -->
+    <section class="hobby-section">
+      <div class="hobby-header-block">
+        <span class="feature-category" data-en="ENTERTAINMENT" data-ja="アニメ鑑賞">ENTERTAINMENT</span>
+        <h3 class="hobby-section-title" data-en="Watching Anime" data-ja="アニメ鑑賞">Watching Anime</h3>
+        <p class="hobby-section-desc" data-en="Appreciating Japanese animation for its storytelling, creative direction, and art style while sharpening my Japanese listening comprehension." data-ja="緻密な作画、独自の世界観、心動かされるストーリーに惹かれ鑑賞。日本語の自然なリスニング力向上にも役立っています。">Appreciating Japanese animation for its storytelling, creative direction, and art style while sharpening my Japanese listening comprehension.</p>
+      </div>
+
+      <div class="hobby-photo-gallery">
+        <div class="hobby-photo-track">
+          <div class="hobby-photo-frame">
+            <img src="images/hobbies/hobby-anime.jpg" alt="Watching Anime" />
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Breadcrumb Bar -->
   <div class="breadcrumb-bar">
-    <span class="breadcrumb-current" data-en="Home" data-ja="トップページ">Home</span>
+    <a href="index.html" data-en="Home" data-ja="トップページ">Home</a>
+    <span>&gt;</span>
+    <span class="breadcrumb-current" data-en="Hobby" data-ja="趣味">Hobby</span>
   </div>
 
-  <!-- Wave Footer (Reference Image 2) -->
+  <!-- Footer -->
   <footer class="footer-wave-wrap">
     <svg class="footer-top-wave-svg" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 30 C320 65, 640 -5, 960 25 C1200 45, 1360 15, 1440 28 L1440 60 L0 60 Z" fill="#0f3b4c"/>
@@ -188,8 +185,8 @@
 
       <div class="footer-links-col">
         <ul class="footer-nav-list">
+          <li><a href="index.html" data-en="Home" data-ja="トップページ">Home</a></li>
           <li><a href="about.html" data-en="About Me" data-ja="自己紹介">About Me</a></li>
-          <li><a href="hobby.html" data-en="Hobbies & Passions" data-ja="趣味・興味">Hobbies & Passions</a></li>
           <li><a href="education.html" data-en="Education Timeline" data-ja="学歴タイムライン">Education Timeline</a></li>
           <li><a href="achievements.html" data-en="Honors & Achievements" data-ja="受賞・実績">Honors & Achievements</a></li>
           <li><a href="projects.html" data-en="Featured Projects" data-ja="プロジェクト一覧">Featured Projects</a></li>

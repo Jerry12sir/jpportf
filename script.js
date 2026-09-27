@@ -1,140 +1,98 @@
+/**
+ * Portfolio JavaScript - Bilingual & Interactive System
+ */
 (function () {
   'use strict';
-  let currentLang = 'en';
 
-  // ── Language Toggle ──
-  function setLang(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+  // Real SVG vector flags: Japan & US
+  const FLAGS = {
+    ja: `<svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#ffffff" stroke="#d5dde0" stroke-width="1.2"/><circle cx="16" cy="16" r="6" fill="#bc002d"/></svg>`,
+    en: `<svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><defs><clipPath id="us-clip"><circle cx="16" cy="16" r="15"/></clipPath></defs><g clip-path="url(#us-clip)"><rect width="32" height="32" fill="#bf0a30"/><path d="M0 4.92h32M0 9.85h32M0 14.77h32M0 19.69h32M0 24.62h32M0 29.54h32" stroke="#ffffff" stroke-width="2.46"/><rect width="14" height="17.2" fill="#002868"/><circle cx="3.5" cy="4" r="0.9" fill="#fff"/><circle cx="7" cy="4" r="0.9" fill="#fff"/><circle cx="10.5" cy="4" r="0.9" fill="#fff"/><circle cx="5.25" cy="7" r="0.9" fill="#fff"/><circle cx="8.75" cy="7" r="0.9" fill="#fff"/><circle cx="3.5" cy="10" r="0.9" fill="#fff"/><circle cx="7" cy="10" r="0.9" fill="#fff"/><circle cx="10.5" cy="10" r="0.9" fill="#fff"/><circle cx="5.25" cy="13" r="0.9" fill="#fff"/><circle cx="8.75" cy="13" r="0.9" fill="#fff"/></g><circle cx="16" cy="16" r="15" fill="none" stroke="#d5dde0" stroke-width="1.2"/></svg>`
+  };
+
+  // Default language
+  let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+
+  function updateTexts(lang) {
+    document.documentElement.lang = lang;
     document.querySelectorAll('[data-en]').forEach(el => {
-      el.textContent = el.getAttribute('data-' + lang) || el.textContent;
+      const text = el.getAttribute('data-' + lang);
+      if (text !== null) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = text;
+        } else {
+          el.innerHTML = text;
+        }
+      }
     });
-    const btn = document.getElementById('lang-toggle');
-    if (btn) btn.textContent = lang === 'en' ? 'EN / 日本語' : '日本語 / EN';
+
+    // Update real flag button: show the alternate language flag to switch to
+    // In English mode -> shows Japan flag (click to switch to Japanese)
+    // In Japanese mode -> shows US flag (click to switch to English)
+    const targetLang = lang === 'en' ? 'ja' : 'en';
+    const label = lang === 'en' ? '日本語に切替 (Switch to Japanese)' : 'Switch to English (英語に切替)';
+    document.querySelectorAll('.lang-flag-btn').forEach(btn => {
+      btn.innerHTML = FLAGS[targetLang];
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
+    });
+
     localStorage.setItem('portfolio-lang', lang);
   }
 
-  document.getElementById('lang-toggle')?.addEventListener('click', () => {
-    setLang(currentLang === 'en' ? 'ja' : 'en');
-  });
+  function setLanguage(lang) {
+    currentLang = lang;
+    updateTexts(currentLang);
+  }
 
-  const saved = localStorage.getItem('portfolio-lang');
-  if (saved) setLang(saved);
-
-  // ── Mobile Menu ──
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  menuBtn?.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-    menuBtn.classList.toggle('open');
-  });
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      menuBtn.classList.remove('open');
+  document.querySelectorAll('.lang-flag-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const nextLang = currentLang === 'en' ? 'ja' : 'en';
+      setLanguage(nextLang);
     });
   });
 
-  // ── Scrolled Nav ──
-  const nav = document.getElementById('main-nav');
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', () => {
+    updateTexts(currentLang);
+  });
+
+  // Header scroll shadow
+  const header = document.getElementById('site-header');
   window.addEventListener('scroll', () => {
-    nav?.classList.toggle('scrolled', window.scrollY > 50);
+    if (header) {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }
   });
 
-  // ── Active nav link ──
-  const sections = document.querySelectorAll('.section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-  function updateActiveLink() {
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 200) current = sec.id;
+  // Back to top scroll
+  document.querySelectorAll('.scroll-top-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-    navLinks.forEach(l => {
-      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
-    });
-  }
-  window.addEventListener('scroll', updateActiveLink);
-
-  // ── Scroll Reveal ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-          bar.style.width = bar.dataset.width + '%';
-        });
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.skill-card, .project-card, .achievement-card, .timeline-item, .about-grid, .contact-links').forEach(el => {
-    observer.observe(el);
   });
 
-  // ── Particles ──
-  const canvas = document.getElementById('particle-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    let w, h;
-
-    function resize() {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    class Particle {
-      constructor() { this.reset(); }
-      reset() {
-        this.x = Math.random() * w;
-        this.y = Math.random() * h;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = (Math.random() - 0.5) * 0.4;
-        this.speedY = (Math.random() - 0.5) * 0.4;
-        this.opacity = Math.random() * 0.5 + 0.1;
-      }
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) this.reset();
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(167,139,250,${this.opacity})`;
-        ctx.fill();
-      }
-    }
-
-    const count = Math.min(80, Math.floor(w * h / 15000));
-    for (let i = 0; i < count; i++) particles.push(new Particle());
-
-    function drawLines() {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 150) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(124,92,252,${0.08 * (1 - dist / 150)})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-      }
-    }
-
-    function animate() {
-      ctx.clearRect(0, 0, w, h);
-      particles.forEach(p => { p.update(); p.draw(); });
-      drawLines();
-      requestAnimationFrame(animate);
-    }
-    animate();
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobile-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  if (mobileBtn && mobileDrawer) {
+    mobileBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('open');
+      mobileBtn.classList.toggle('active');
+    });
   }
+
+  // Active page link
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+
 })();
