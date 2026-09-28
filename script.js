@@ -66,8 +66,31 @@
     }
   });
 
-  // Back to top scroll
-  document.querySelectorAll('.scroll-top-btn').forEach(btn => {
+  // Back to top scroll: appears progressively when scrolling deeper, settles into fixed place
+  const scrollTopBtns = document.querySelectorAll('.scroll-top-btn');
+  function updateScrollTopVisibility() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    scrollTopBtns.forEach(btn => {
+      if (scrollY > 100) {
+        btn.classList.add('is-visible');
+        // Progressive transition between 100px and 350px scroll depth
+        const progress = Math.min(1, Math.max(0, (scrollY - 100) / 250));
+        btn.style.opacity = progress.toFixed(2);
+        btn.style.transform = `translateY(${(1 - progress) * 18}px)`;
+        btn.style.pointerEvents = progress > 0.15 ? 'auto' : 'none';
+      } else {
+        btn.classList.remove('is-visible');
+        btn.style.opacity = '0';
+        btn.style.transform = 'translateY(18px)';
+        btn.style.pointerEvents = 'none';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateScrollTopVisibility, { passive: true });
+  updateScrollTopVisibility();
+
+  scrollTopBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
