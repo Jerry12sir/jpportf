@@ -26,13 +26,12 @@
       }
     });
 
-    // Update real flag button: show the alternate language flag to switch to
-    // In English mode -> shows Japan flag (click to switch to Japanese)
-    // In Japanese mode -> shows US flag (click to switch to English)
-    const targetLang = lang === 'en' ? 'ja' : 'en';
+    // Update real flag button: show the flag of the current language
+    // In English mode -> shows US flag (click to switch to Japanese)
+    // In Japanese mode -> shows Japan flag (click to switch to English)
     const label = lang === 'en' ? '日本語に切替 (Switch to Japanese)' : 'Switch to English (英語に切替)';
     document.querySelectorAll('.lang-flag-btn').forEach(btn => {
-      btn.innerHTML = FLAGS[targetLang];
+      btn.innerHTML = FLAGS[lang];
       btn.setAttribute('aria-label', label);
       btn.setAttribute('title', label);
     });

@@ -36,7 +36,7 @@
         <div class="header-icons">
           <!-- Flag Language Switcher (Real Vector SVG) -->
           <button class="lang-flag-btn" aria-label="日本語に切替 (Switch to Japanese)" title="日本語に切替 (Switch to Japanese)">
-            <svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#ffffff" stroke="#d5dde0" stroke-width="1.2"/><circle cx="16" cy="16" r="6" fill="#bc002d"/></svg>
+            <svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><defs><clipPath id="us-clip"><circle cx="16" cy="16" r="15"/></clipPath></defs><g clip-path="url(#us-clip)"><rect width="32" height="32" fill="#bf0a30"/><path d="M0 4.92h32M0 9.85h32M0 14.77h32M0 19.69h32M0 24.62h32M0 29.54h32" stroke="#ffffff" stroke-width="2.46"/><rect width="14" height="17.2" fill="#002868"/><circle cx="3.5" cy="4" r="0.9" fill="#fff"/><circle cx="7" cy="4" r="0.9" fill="#fff"/><circle cx="10.5" cy="4" r="0.9" fill="#fff"/><circle cx="5.25" cy="7" r="0.9" fill="#fff"/><circle cx="8.75" cy="7" r="0.9" fill="#fff"/><circle cx="3.5" cy="10" r="0.9" fill="#fff"/><circle cx="7" cy="10" r="0.9" fill="#fff"/><circle cx="10.5" cy="10" r="0.9" fill="#fff"/><circle cx="5.25" cy="13" r="0.9" fill="#fff"/><circle cx="8.75" cy="13" r="0.9" fill="#fff"/></g><circle cx="16" cy="16" r="15" fill="none" stroke="#d5dde0" stroke-width="1.2"/></svg>
           </button>
 
           <!-- GitHub Circle -->
@@ -50,7 +50,7 @@
           </a>
 
           <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1.3 4.5h21.4M1.3 12h21.4M1.3 19.5h21.4"/></svg>
           </button>
         </div>
       </div>
@@ -96,7 +96,7 @@
       <div class="feature-bloc-wrap">
 
         <!-- Left Large Featured Card -->
-        <a href="achievements.html" class="feature-item-large">
+        <a href="achievements.html#netacad-rider" class="feature-item-large">
           <div class="f-img-wrap">
             <img src="images/achievements/achievement-netacad.jpg" alt="NetAcad Rider 2025" />
           </div>
@@ -110,7 +110,17 @@
         <!-- Right 4-Card Editorial Column -->
         <div class="feature-list-col">
 
-          <a href="projects.html" class="feature-mini-item">
+          <a href="projects.html#jiyuu-sns" class="feature-mini-item">
+            <div class="mini-img">
+              <img src="images/projects/project-jiyuu-sns.png" alt="JIYUU-SNS" />
+            </div>
+            <div class="mini-info">
+              <span class="feature-category" data-en="WEB APP & SNS" data-ja="Webアプリ・SNS">WEB APP & SNS</span>
+              <h4 class="mini-title" data-en="JIYUU-SNS" data-ja="JIYUU-SNS">JIYUU-SNS</h4>
+            </div>
+          </a>
+
+          <a href="projects.html#nihongo-attack" class="feature-mini-item">
             <div class="mini-img">
               <img src="images/projects/project-nihongo-attack.jpg" alt="日本語アタック (Nihongo Attack)" />
             </div>
@@ -120,7 +130,7 @@
             </div>
           </a>
 
-          <a href="projects.html" class="feature-mini-item">
+          <a href="projects.html#jiyuu-counter" class="feature-mini-item">
             <div class="mini-img">
               <img src="images/projects/project-jiyuu-counter.png" alt="JIYUU-Button-Counter" />
             </div>
@@ -130,7 +140,7 @@
             </div>
           </a>
 
-          <a href="projects.html" class="feature-mini-item">
+          <a href="projects.html#mysql-cluster" class="feature-mini-item">
             <div class="mini-img">
               <img src="images/projects/project-mysql-cluster.jpg" alt="MySQL InnoDB Cluster" />
             </div>
@@ -140,26 +150,11 @@
             </div>
           </a>
 
-          <a href="projects.html" class="feature-mini-item">
-            <div class="mini-img">
-              <img src="images/projects/project-network.jpg" alt="Network Design & Optimization" />
-            </div>
-            <div class="mini-info">
-              <span class="feature-category" data-en="NETWORKING" data-ja="ネットワーク">NETWORKING</span>
-              <h4 class="mini-title" data-en="Network Design & Optimization" data-ja="ネットワーク設計と最適化">Network Design & Optimization</h4>
-            </div>
-          </a>
-
         </div>
 
       </div>
     </section>
   </main>
-
-  <!-- Breadcrumb Bar -->
-  <div class="breadcrumb-bar">
-    <span class="breadcrumb-current" data-en="Home" data-ja="トップページ">Home</span>
-  </div>
 
   <!-- Wave Footer (Reference Image 2) -->
   <footer class="footer-wave-wrap">

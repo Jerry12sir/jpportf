@@ -224,17 +224,23 @@ img {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
-  flex-direction: column;
-  gap: 5px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-main);
 }
 
-.mobile-toggle span {
-  width: 24px;
-  height: 2px;
-  background-color: var(--color-main);
+.mobile-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  overflow: visible;
+  stroke-linecap: round;
   display: block;
-  transition: var(--transition);
 }
 
 .mobile-drawer {
@@ -383,6 +389,7 @@ html[lang="ja"] .ttl-line.ttl-main {
 .feature-item-large {
   display: block;
   background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
@@ -455,6 +462,7 @@ html[lang="ja"] .ttl-line.ttl-main {
 .feature-mini-item {
   display: block;
   background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
@@ -774,6 +782,8 @@ html[lang="ja"] .ttl-line.ttl-main {
 
 .achieve-card-lg {
   background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  scroll-margin-top: 96px;
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
@@ -848,6 +858,8 @@ html[lang="ja"] .ttl-line.ttl-main {
 
 .project-showcase-card {
   background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  scroll-margin-top: 96px;
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
@@ -1069,6 +1081,7 @@ html[lang="ja"] .ttl-line.ttl-main {
 
 .history-thumb-slot {
   background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   overflow: hidden;
   transition: var(--transition);
@@ -1460,7 +1473,8 @@ html[lang="ja"] .ttl-line.ttl-main {
     width: 34px;
     height: 34px;
   }
-  .icon-btn svg {
+  .icon-btn svg,
+  .mobile-toggle svg {
     width: 18px;
     height: 18px;
   }
@@ -1722,7 +1736,8 @@ html[lang="ja"] .ttl-line.ttl-main {
     width: 30px;
     height: 30px;
   }
-  .icon-btn svg {
+  .icon-btn svg,
+  .mobile-toggle svg {
     width: 16px;
     height: 16px;
   }

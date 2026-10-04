@@ -33,7 +33,7 @@
 
         <div class="header-icons">
           <button class="lang-flag-btn" aria-label="日本語に切替 (Switch to Japanese)" title="日本語に切替 (Switch to Japanese)">
-            <svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#ffffff" stroke="#d5dde0" stroke-width="1.2"/><circle cx="16" cy="16" r="6" fill="#bc002d"/></svg>
+            <svg class="flag-svg" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><defs><clipPath id="us-clip"><circle cx="16" cy="16" r="15"/></clipPath></defs><g clip-path="url(#us-clip)"><rect width="32" height="32" fill="#bf0a30"/><path d="M0 4.92h32M0 9.85h32M0 14.77h32M0 19.69h32M0 24.62h32M0 29.54h32" stroke="#ffffff" stroke-width="2.46"/><rect width="14" height="17.2" fill="#002868"/><circle cx="3.5" cy="4" r="0.9" fill="#fff"/><circle cx="7" cy="4" r="0.9" fill="#fff"/><circle cx="10.5" cy="4" r="0.9" fill="#fff"/><circle cx="5.25" cy="7" r="0.9" fill="#fff"/><circle cx="8.75" cy="7" r="0.9" fill="#fff"/><circle cx="3.5" cy="10" r="0.9" fill="#fff"/><circle cx="7" cy="10" r="0.9" fill="#fff"/><circle cx="10.5" cy="10" r="0.9" fill="#fff"/><circle cx="5.25" cy="13" r="0.9" fill="#fff"/><circle cx="8.75" cy="13" r="0.9" fill="#fff"/></g><circle cx="16" cy="16" r="15" fill="none" stroke="#d5dde0" stroke-width="1.2"/></svg>
           </button>
           <a href="https://github.com/Jerry12sir" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub profile">
             <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -42,7 +42,7 @@
             <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
           <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1.3 4.5h21.4M1.3 12h21.4M1.3 19.5h21.4"/></svg>
           </button>
         </div>
       </div>
@@ -67,8 +67,64 @@
 
     <div class="projects-showcase-grid">
 
+      <!-- Project: JIYUU-SNS -->
+      <article id="jiyuu-sns" class="project-showcase-card">
+        <div class="project-img-container">
+          <img src="images/projects/project-jiyuu-sns.png" alt="JIYUU-SNS" />
+        </div>
+        <div class="project-body">
+          <div class="project-header-top">
+            <div class="project-meta-badges">
+              <span class="project-timeline-date" data-en="Sep 2026 – Present" data-ja="2026年9月 – 現在">Sep 2026 – Present</span>
+              <span class="project-team-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span data-en="Leader · 5 members" data-ja="リーダー · 5名">Leader · 5 members</span>
+              </span>
+              <span class="feature-category" data-en="WEB APP & SNS" data-ja="Webアプリ・SNS">WEB APP & SNS</span>
+            </div>
+            <div class="project-links-wrap">
+              <a href="https://jiyuu-sns.jiyuu-org.workers.dev/" target="_blank" rel="noopener noreferrer" class="project-circle-link link-ext" title="Live Demo" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://github.com/JIYUU-Team-3/jiyuu-sns" target="_blank" rel="noopener noreferrer" class="project-circle-link link-gh" title="GitHub Repository" aria-label="GitHub Repository">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-en="JIYUU-SNS" data-ja="JIYUU-SNS">JIYUU-SNS</h3>
+          <p class="project-desc" data-en="JIYUU-SNS is a social networking web app where users can sign in with their Google account and share posts with others. It supports English, Japanese, and Khmer, and the team kept quality high with automated code review, static analysis, and end-to-end testing on every change." data-ja="「JIYUU-SNS」は、Googleアカウントでサインインして投稿を共有できるSNS型Webアプリケーションです。英語・日本語・クメール語に対応し、自動コードレビュー・静的解析・E2Eテストを変更ごとに実施して品質を維持しました。">JIYUU-SNS is a social networking web app where users can sign in with their Google account and share posts with others. It supports English, Japanese, and Khmer, and the team kept quality high with automated code review, static analysis, and end-to-end testing on every change.</p>
+
+          <div class="project-responsibilities">
+            <span class="resp-heading" data-en="Responsibilities" data-ja="担当業務・役割">Responsibilities</span>
+            <ul class="resp-list">
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Contributed to UI Issues" data-ja="UI関連Issueの対応・改善">Contributed to UI Issues</span>
+              </li>
+              <li>
+                <svg class="resp-check-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2185c5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span data-en="Quality Assurance Check" data-ja="品質保証・テスト検証">Quality Assurance Check</span>
+              </li>
+            </ul>
+          </div>
+
+          <span class="tools-heading" data-en="Environment/Tools" data-ja="開発環境・ツール">Environment/Tools</span>
+          <div class="project-tags-wrap">
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">ESLint</span>
+            <span class="tech-tag">Prettier</span>
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">Vitest</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">CodeRabbit</span>
+            <span class="tech-tag">SonarQube</span>
+            <span class="tech-tag">Better Auth (Google)</span>
+          </div>
+        </div>
+      </article>
+
       <!-- Project 1: 日本語アタック (Nihongo Attack) -->
-      <article class="project-showcase-card">
+      <article id="nihongo-attack" class="project-showcase-card">
         <div class="project-img-container">
           <img src="images/projects/project-nihongo-attack.jpg" alt="日本語アタック (Nihongo Attack)" />
         </div>
@@ -126,7 +182,7 @@
       </article>
 
       <!-- Project 2: JIYUU-Button-Counter -->
-      <article class="project-showcase-card">
+      <article id="jiyuu-counter" class="project-showcase-card">
         <div class="project-img-container">
           <img src="images/projects/project-jiyuu-counter.png" alt="JIYUU-Button-Counter" />
         </div>
@@ -178,7 +234,7 @@
       </article>
 
       <!-- Project 3: High Availability on MySQL InnoDB Cluster -->
-      <article class="project-showcase-card">
+      <article id="mysql-cluster" class="project-showcase-card">
         <div class="project-img-container">
           <img src="images/projects/project-mysql-cluster.jpg" alt="High Availability on MySQL InnoDB Cluster Architecture" />
         </div>
@@ -228,7 +284,7 @@
       </article>
 
       <!-- Project 4: Network Design & Optimization -->
-      <article class="project-showcase-card">
+      <article id="network-design" class="project-showcase-card">
         <div class="project-img-container">
           <img src="images/projects/project-network.jpg" alt="Network Design & Optimization Topology Diagram" />
         </div>
@@ -284,7 +340,7 @@
       </article>
 
       <!-- Project 5: Mini Smart Garden -->
-      <article class="project-showcase-card">
+      <article id="smart-garden" class="project-showcase-card">
         <div class="project-img-container">
           <img src="images/projects/project-garden.jpg" alt="Mini Smart Garden IoT Prototype" />
         </div>
